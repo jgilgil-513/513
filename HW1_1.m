@@ -8,13 +8,11 @@ q = 1E-5;
 th = linspace(0,2*pi(),N);
 steps = 20000;
 
+% Let me know if you have questions about doing this with ODE45.
+
 %Plot positive paricle E-field lines
 for j = 1:N
-
-    [x,y] = ode_gilgilP(d,q,th(j),steps);
-    
-    X(:,j) = x;
-    Y(:,j) = y;
+    [X(:,j),Y(:,j)] = ode_gilgilP(d,q,th(j),steps);
 end
 
 figure(1)
@@ -31,7 +29,8 @@ for j = 1:N
 end
 
 plot(X,Y);
-axis([-N N -N N])
+%axis([-N N -N N])
+axis square
 xlabel('x')
 ylabel('y')
 title('Homework1.1','Interpreter','Latex');

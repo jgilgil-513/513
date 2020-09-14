@@ -1,6 +1,9 @@
     
 function [x,y]= ode_gilgilN(d,q,th,steps)    
 
+% Would be better to pass a sign argument to this function. This script
+% is almost identical to "P" script; duplicate code should be avoided
+% as it can create many problems later on.
     dt = 0.01;
     
     to = 0;
