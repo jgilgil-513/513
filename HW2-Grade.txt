@@ -1,0 +1,3 @@
+10/10
+
+I liked your plot for 2.2. One thing though - 3-D plots are rarely easy to interpret. I would have used a contour plot + the points that you showed for the answer.

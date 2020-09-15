@@ -1,8 +1,9 @@
 function Fi=F(P,Po,Vl,Vb,Vt,Vr)
 
-syms n
+%syms n % Not needed (and I could not run with this b/c I don't have
+%toolbox).
 
-N = 1:2:10; %Odd numbers
+N = 1:2:99; %Odd numbers
 
 xo = Po(1);
 yo = Po(2);
@@ -23,7 +24,7 @@ for i=1:length(N)
     
 
     Fi = Fi + Fl + Fb + Ft + Fr;
-    
+
 end
 
 end

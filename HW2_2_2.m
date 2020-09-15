@@ -5,7 +5,9 @@ Vb = 60;
 Vt = 100;
 Vr = 20;	
 
-
+% Your answer is correct. 
+% Did you use the fact that if all boundaries are at same value,
+% potential should be that value everywhere insides?
 
 Po = [1,1];  % [xo,yo]
 
