@@ -1,0 +1,30 @@
+  	
+Calculation of Flux using the average of the center and the edge (original)
+
+
+	pc              Bc            pe            Be            Bm          Area       Flux                 
+    ___________    ___________    ___________    __________    __________    ______    __________
+
+    0    0    2     5.6198e-08    1    1    2    2.2455e-08    3.9326e-08    3.1416    1.2355e-07
+
+
+
+
+Calculation of the flux using the average of the magnetic field with 100 point sampling from -1 to 1 in x and y = 0 (see HW4_3a_plot)
+
+
+
+        p             Bm        Area       Flux                   
+    ___________    ________    ______   ___________
+
+    1    0    2    4.86e-08    3.1416    1.5268e-07
+
+
+
+Calculation of the flux using the average of the magnetic field with a mesh of 100x100 point sampling from -1 to 1 in x and -1 to 1 in y  (see HW4_3b_plot)    
+
+
+         p             Bm         Area        Flux   
+    ___________    __________    ______    __________
+
+    1    1    2    4.1995e-08    3.1416    1.3193e-07
