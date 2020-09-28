@@ -47,12 +47,15 @@ for j=1:60
     Sol_Error(j,:)= abs((B1(j,3)-B3(j,:))/B3(j,:)); %calculate solution error 
 
 end
+
+% Great that you checked both options for computing B (end and middle).
+% In limit that number of segments -> infinity, won't matter.
 figure(1)
 semilogx(Sides,B1(:,3),'*-r',Sides,B2,'o-g',Sides,B3,'+-b')
 title('Biot-Savart - Magnetic Field of a closed loop at z = 0')
-xlabel('Poligon Sides')
+xlabel('Polygon Sides')
 ylabel('Magnetic Filed)')
-legend('Solution','N-Poligon','Circle')
+legend('Solution','N-Polygon','Circle')
 
 Solution = B1;
 NPoligon = B2;
