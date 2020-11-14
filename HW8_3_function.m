@@ -110,7 +110,7 @@ for iter=1:Niter
     % Source
     if source == 1
         Ey(2) = sin(2*pi*fs*dt*iter);
-        Ey1(2) = sin(2*pi*fs*dt*iter);
+        
     end
 
 %     
@@ -118,48 +118,31 @@ for iter=1:Niter
     % equations. All the rest of the program is basically bookkeeping and plotting.
    
     Hz(1) = Hz(2); % Absorbing boundary conditions for left-propagating waves
-    Hz1(1) = Hz1(2); % Absorbing boundary conditions for left-propagating waves
+    
    
     for i=2:Nx-1 % Update H field
       Hz(i) = Hz(i)-am(i)*(Ey(i+1)-Ey(i));
-      if i >= Nx/2
-          Hz1(i) = Hz1(i)-am(1)*(Ey1(i+1)-Ey1(i));
-      else
-          Hz1(i) = Hz1(i)-am(i)*(Ey1(i+1)-Ey1(i));
-      end
-      
-      
+        
      end
     
     Ey(Nx) = Ey(Nx-1); % Absorbing boundary conditions for right-propagating waves
-    Ey1(Nx) = Ey1(Nx-1); % Absorbing boundary conditions for right-propagating waves
-    
+   
      for i=2:Nx-1 % Update E field
       Ey(i) = as(i)*Ey(i)-ae(i)*(Hz(i)-Hz(i-1));
-      if i >= Nx/2
-           Ey1(i) = as(1)*Ey1(i)-ae(1)*(Hz1(i)-Hz1(i-1));
-           Ey2(i) = Ey(i)-Ey1(i);
-      else
-          Ey1(i) = as(i)*Ey1(i)-ae(i)*(Hz1(i)-Hz1(i-1));
-          Ey2(i) = Ey(i)-Ey1(i);
-      end
+     
      end
      
 
     
     Hz_ip(iter) = Hz(ip);
-    Hz1_ip(iter) = Hz1(ip);
     
     Ey_ip(iter) = Ey(ip);
-    Ey1_ip(iter) = Ey1(ip);
-
+    
     if (animate || iter == Niter)
         figure(2);hold off;
-            plot(ix(1:ixb),Ey(1:ixb),'b--','LineWidth',2);
+            plot(ix(1:ixb),Ey(1:ixb),'b','LineWidth',3);
             hold on;
-            plot(ix(1:ixb),Ey1(1:ixb),'r--','LineWidth',2);     
-            hold on;
-            plot(ix(1:ixb),Ey2(1:ixb),'g--','LineWidth',2);     
+               
             plot(ix(ixb+1:Nx),Ey(ixb+1:Nx),'k','LineWidth',2);
             hold on;           
             grid on;
