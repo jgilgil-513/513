@@ -14,7 +14,7 @@ wc = 2/(sqrt(L*C));
 fc = wc/(2*pi)   %around 6Mz for this LC combination
 
 
-[Zk,Vk,Ik]= Final_Part_I(w,L,C,N,Zl,Vo);
+[Zk,Vk,Ik]= Final_function(w,L,C,N,Zl,Vo);
 
 
 Nth = 1:N;
