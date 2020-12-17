@@ -1,5 +1,5 @@
-9.5/10
+9.75/10
 
-Correct results, but should have discussion of interpretation and comparisons with continous transmission lines. (I suspect there is an error in your Vk/Ik plots. They should exactly match Zk.
+See PDFs for comments.
 
 Course Grade: A
