@@ -22,6 +22,7 @@ Zk(1) = Zk(2)+1i*w*L; %This is Z0
 
 Vk(1) = Vo; %This is V0
 
+
 for k = 2:N
     
  if k == 2
